@@ -11,11 +11,6 @@ local Window = WindUI:CreateWindow({
     Theme = "Dark",
     Resizable = false,
 })
-Window:Tag({
-    Title = "v1.0.0",
-    Color = Color3.fromHex("#30ff6a"),
-    Radius = 13,
-})
 
 local TabTeleport = Window:Tab({ Title = "Teleport" })
 local TabSettings = Window:Tab({ Title = "Settings" })
