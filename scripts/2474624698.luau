@@ -4,7 +4,7 @@ local Window = WindUI:CreateWindow({
     Title = "Main Window",
     Author = "AlexandreTop64",
     Folder = "Mini-Script",
-    Size = UDim2.fromOffset(580, 200),
+    Size = UDim2.fromOffset(600, 500),
     Transparency = true,
     Theme = "Dark",
 })
