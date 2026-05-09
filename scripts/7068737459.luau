@@ -17,6 +17,13 @@ local TabSettings = Window:Tab({ Title = "Settings" })
 
 TabTeleport:Select()
 TabTeleport:Button({
+    Title = "Lobby",
+    Callback = function()
+        local placeId = 6243699076
+        TeleportService:Teleport(placeId, game.Players.LocalPlayer)
+    end
+})
+TabTeleport:Button({
     Title = "Gamemodes",
     Callback = function()
         local placeId = 7068737459
