@@ -7,6 +7,7 @@ local Window = WindUI:CreateWindow({
     Size = UDim2.fromOffset(580, 460),
     MinSize = Vector2.new(560, 350),
     MaxSize = Vector2.new(850, 560),
+    ToggleKey = Enum.KeyCode.RightControl,
     Transparent = true,
     Theme = "Dark",
     Resizable = false,
@@ -15,7 +16,6 @@ local Window = WindUI:CreateWindow({
 local TabMain = Window:Tab({
     Title = "Main",
     Icon = "bird",
-    Locked = true,
 })
 
 TabMain:Button({
