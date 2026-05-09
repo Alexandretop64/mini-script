@@ -18,20 +18,6 @@ local TabMain = Window:Tab({
     Icon = "bird",
 })
 
-Window:EditOpenButton({
-    Title = "Open Example UI",
-    Icon = "monitor",
-    CornerRadius = UDim.new(0,16),
-    StrokeThickness = 2,
-    Color = ColorSequence.new( -- gradient
-        Color3.fromHex("FF0F7B"), 
-        Color3.fromHex("F89B29")
-    ),
-    OnlyMobile = false,
-    Enabled = true,
-    Draggable = true,
-})
-
 TabMain:Button({
     Title = "Deletar blocos fakes da garena firo firo",
     Callback = function()
