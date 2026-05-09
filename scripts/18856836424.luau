@@ -65,7 +65,7 @@ end
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "Astreon | The Mimic Lobby",
+    Title = "Astreon | War Empire Tycoon",
     Folder = "Astreon",
     Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
