@@ -24,13 +24,6 @@ TabTeleport:Button({
     end
 })
 TabTeleport:Button({
-    Title = "Gamemodes",
-    Callback = function()
-        local placeId = 7068737459
-        TeleportService:Teleport(placeId, game.Players.LocalPlayer)
-    end
-})
-TabTeleport:Button({
     Title = "Jigoku",
     Callback = function()
         local placeId = 1234567890
