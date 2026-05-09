@@ -4,13 +4,10 @@ local Window = WindUI:CreateWindow({
     Title = "Main Menu",
     Author = "AlexandreTop64",
     Folder = "Mini-Script",
-    Size = UDim2.fromOffset(580, 460),
-    MinSize = Vector2.new(560, 350),
-    MaxSize = Vector2.new(850, 560),
+    Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
     Transparent = true,
     Theme = "Dark",
-    Resizable = false,
 })
 
 local TabMain = Window:Tab({
