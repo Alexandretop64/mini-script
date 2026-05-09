@@ -98,11 +98,12 @@ TabPlayer:Slider({
         Max = 100,
         Default = 25,
     },
-    Callback = function(value)
-        local char = getCharacter()
-        local humanoid = char:FindFirstChildOfClass("Humanoid")
+    Callback = function(speed)
+        local player = game:GetService("Players").LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
         if humanoid then
-            humanoid.WalkSpeed = value
+            humanoid.WalkSpeed = speed
         end
     end
 })
