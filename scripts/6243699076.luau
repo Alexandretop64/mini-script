@@ -17,7 +17,7 @@ Window:Tag({
     Radius = 13,
 })
 
-local TabMain = Window:Tab({ Title = "Main" })
+-- local TabMain = Window:Tab({ Title = "Main" })
 local TabTeleport = Window:Tab({ Title = "Teleport" })
 local TabSettings = Window:Tab({ Title = "Settings" })
 
