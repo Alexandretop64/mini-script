@@ -12,7 +12,6 @@ local function tp(cf)
     hrp.Anchored = true
     hrp.CFrame = CFrame.new(cf.Position)
     task.wait(0.2)
-
     hrp.Anchored = false
 end
 
@@ -43,15 +42,9 @@ TabMain:Button({
 TabMain:Button({
     Title = "Teleport safezone",
     Callback = function()
-
         local safezone = workspace:FindFirstChild("Fp Oddball")
-
         if safezone then
-
-            local cf = safezone:IsA("Model")
-                and safezone:GetPivot()
-                or safezone.CFrame
-
+            local cf = safezone:IsA("Model") and safezone:GetPivot() or safezone.CFrame
             tp(cf + Vector3.new(0,14,-5))
         end
     end
@@ -63,32 +56,32 @@ TabMain:Button({
     end
 })
 
+local Lighting = game:GetService("Lighting")
+
+local OriginalBrightness = Lighting.Brightness
+local OriginalClockTime = Lighting.ClockTime
+local OriginalAmbient = Lighting.Ambient
+local OriginalFogEnd = Lighting.FogEnd
+
+local function EnableFullBright()
+    Lighting.Brightness = 2
+    Lighting.ClockTime = 14
+    Lighting.Ambient = Color3.new(1,1,1)
+    Lighting.FogEnd = 100000
+end
+
+local function DisableFullBright()
+    Lighting.Brightness = OriginalBrightness
+    Lighting.ClockTime = OriginalClockTime
+    Lighting.Ambient = OriginalAmbient
+    Lighting.FogEnd = OriginalFogEnd
+end
+
 TabPlayer:Toggle({
-    Title = "Fullbrigh",
+    Title = "FullBright",
     Type = "Checkbox",
     Value = false,
     Callback = function(state)
-        local Lighting = game:GetService("Lighting")
-        
-        local OriginalBrightness = Lighting.Brightness
-        local OriginalClockTime = Lighting.ClockTime
-        local OriginalAmbient = Lighting.Ambient
-        local OriginalFogEnd = Lighting.FogEnd
-
-        local function EnableFullBright()
-            Lighting.Brightness = 2
-            Lighting.ClockTime = 14
-            Lighting.Ambient = Color3.new(1,1,1)
-            Lighting.FogEnd = 100000
-        end
-
-        local function DisableFullBright()
-            Lighting.Brightness = OriginalBrightness
-            Lighting.ClockTime = OriginalClockTime
-            Lighting.Ambient = OriginalAmbient
-            Lighting.FogEnd = OriginalFogEnd
-        end
-
         if state then
             EnableFullBright()
         else
