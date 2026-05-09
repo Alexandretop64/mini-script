@@ -3,7 +3,7 @@ local TeleportService = game:GetService("TeleportService")
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "The Mimic Lobby",
+    Title = "Astreon | The Mimic Lobby",
     Folder = "Mini-Script",
     Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
