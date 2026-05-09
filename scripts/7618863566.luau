@@ -29,6 +29,7 @@ local Window = WindUI:CreateWindow({
 })
 
 local TabMain = Window:Tab({ Title = "Main" })
+local TabPlayer = Window:Tab({ Title = "LocalPlayer" })
 local TabSettings = Window:Tab({ Title = "Settings" })
 
 TabMain:Select()
@@ -53,13 +54,46 @@ TabMain:Button({
 
             tp(cf + Vector3.new(0,14,-5))
         end
-
     end
 })
 
 TabMain:Button({
     Title = "Auto collect orbs",
     Callback = function()
+    end
+})
+
+TabPlayer:Toggle({
+    Title = "Fullbrigh",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state)
+        local Lighting = game:GetService("Lighting")
+        
+        local OriginalBrightness = Lighting.Brightness
+        local OriginalClockTime = Lighting.ClockTime
+        local OriginalAmbient = Lighting.Ambient
+        local OriginalFogEnd = Lighting.FogEnd
+
+        local function EnableFullBright()
+            Lighting.Brightness = 2
+            Lighting.ClockTime = 14
+            Lighting.Ambient = Color3.new(1,1,1)
+            Lighting.FogEnd = 100000
+        end
+
+        local function DisableFullBright()
+            Lighting.Brightness = OriginalBrightness
+            Lighting.ClockTime = OriginalClockTime
+            Lighting.Ambient = OriginalAmbient
+            Lighting.FogEnd = OriginalFogEnd
+        end
+
+        if state then
+            EnableFullBright()
+        else
+            DisableFullBright()
+        end
     end
 })
 
