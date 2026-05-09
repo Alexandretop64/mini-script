@@ -3,7 +3,7 @@ local TeleportService = game:GetService("TeleportService")
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "Astreon | The Mimic Gamemodes",
+    Title = "Astreon | The Mimic Jigoku",
     Folder = "Astreon",
     Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
@@ -12,22 +12,26 @@ local Window = WindUI:CreateWindow({
     Resizable = false,
 })
 
-local TabTeleport = Window:Tab({ Title = "Teleport" })
+local TabMain = Window:Tab({ Title = "Main" })
 local TabSettings = Window:Tab({ Title = "Settings" })
 
-TabTeleport:Select()
-TabTeleport:Button({
-    Title = "Lobby",
+TabMain:Select()
+TabMain:Button({
+    Title = "Teleport cutscene",
     Callback = function()
-        local placeId = 6243699076
-        TeleportService:Teleport(placeId, game.Players.LocalPlayer)
+        
     end
 })
-TabTeleport:Button({
-    Title = "Jigoku",
+TabMain:Button({
+    Title = "Teleport safezone",
     Callback = function()
-        local placeId = 7618863566
-        TeleportService:Teleport(placeId, game.Players.LocalPlayer)
+        
+    end
+})
+TabMain:Button({
+    Title = "Auto collect orbs",
+    Callback = function()
+        
     end
 })
 
