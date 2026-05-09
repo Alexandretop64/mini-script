@@ -15,7 +15,7 @@ local Window = WindUI:CreateWindow({
 
 local TabMain = Window:Tab({
     Title = "Main",
-    Icon = "bird",
+    Icon = "house",
 })
 
 TabMain:Button({
