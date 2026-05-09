@@ -12,7 +12,11 @@ local Window = WindUI:CreateWindow({
     Resizable = false,
 })
 
-local TabMain = Window:Tab({ Title = "Main" })
+local TabMain = Window:Tab({
+    Title = "Main",
+    Icon = "bird",
+    Locked = true,
+})
 
 TabMain:Button({
     Title = "Deletar blocos fakes da garena firo firo",
