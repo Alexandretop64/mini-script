@@ -21,6 +21,7 @@ local TabMain = Window:Tab({ Title = "Main" })
 local TabTeleport = Window:Tab({ Title = "Teleport" })
 local TabSettings = Window:Tab({ Title = "Settings" })
 
+TabTeleport:Select()
 TabTeleport:Button({
     Title = "Lobby",
     Callback = function()
