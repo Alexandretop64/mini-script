@@ -1,12 +1,15 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "Main Window",
+    Title = "Main Menu",
     Author = "AlexandreTop64",
     Folder = "Mini-Script",
-    Size = UDim2.fromOffset(600, 500),
-    Transparency = true,
+    Size = UDim2.fromOffset(580, 460),
+    MinSize = Vector2.new(560, 350),
+    MaxSize = Vector2.new(850, 560),
+    Transparent = true,
     Theme = "Dark",
+    Resizable = false,
 })
 
 local TabMain = Window:Tab({ Title = "Main" })
