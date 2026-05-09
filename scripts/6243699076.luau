@@ -4,7 +4,7 @@ local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/rel
 
 local Window = WindUI:CreateWindow({
     Title = "Astreon | The Mimic Lobby",
-    Folder = "Mini-Script",
+    Folder = "Astreon",
     Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
     Transparent = true,
