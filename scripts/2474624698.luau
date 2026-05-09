@@ -8,30 +8,11 @@ local Window = WindUI:CreateWindow({
     ToggleKey = Enum.KeyCode.RightControl,
     Transparent = true,
     Theme = "Dark",
+    Rezisable = false,
 })
 
-local TabMain = Window:Tab({
-    Title = "Main",
-    Icon = "house",
-})
+local TabMain = Window:Tab({ Title = "Main"})
 
 TabMain:Button({
-    Title = "Deletar blocos fakes da garena firo firo",
-    Callback = function()
-        local grass: Model = workspace:WaitForChild("Glass")
-        if not grass then return print("Essa não existe, mané") end
-
-        for _, model in ipairs(grass:GetChildren()) do
-            if model:IsA("Model") then
-                local soundInstance: Sound = model:FindFirstChild("Sound", true)
-                if not soundInstance then continue end
-
-                local part: BasePart = soundInstance.Parent
-                if not part then continue end
-                
-                part:Destroy()
-            end
-        end
-
-    end
+    Title = "Teste",
 })
