@@ -35,6 +35,13 @@ TabTeleport:Button({
         TeleportService:Teleport(placeId, game.Players.LocalPlayer)
     end
 })
+TabTeleport:Button({
+    Title = "Jigoku",
+    Callback = function()
+        local placeId = 1234567890
+        TeleportService:Teleport(placeId, game.Players.LocalPlayer)
+    end
+})
 
 TabSettings:Button({
     Title = "Destroy UI",
