@@ -90,6 +90,23 @@ TabPlayer:Toggle({
     end
 })
 
+TabPlayer:Slider({
+    Title = "WalkSpeed",
+    Step = 1,
+    Value = {
+        Min = 14,
+        Max = 100,
+        Default = 25,
+    },
+    Callback = function(value)
+        local char = getCharacter()
+        local humanoid = char:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.WalkSpeed = value
+        end
+    end
+})
+
 TabSettings:Button({
     Title = "Destroy UI",
     Callback = function()
