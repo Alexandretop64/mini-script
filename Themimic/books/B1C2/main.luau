@@ -1,7 +1,7 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
-    Title = "Astreon | The Mimic Control Chapter 1",
+    Title = "Astreon | The Mimic Control Chapter 2",
     Folder = "Astreon",
     Size = UDim2.fromOffset(700, 500),
     ToggleKey = Enum.KeyCode.RightControl,
@@ -14,10 +14,10 @@ local TabMain = Window:Tab({ Title = "Main" })
 local TabSettings = Window:Tab({ Title = "Settings" })
 
 TabMain:Button({
-    Title = "Auto win",
+    Title = "Auto win (Only you win)",
     Callback = function()
         local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
-        local location = CFrame.new(3478, 41, -1538)
+        local location = CFrame.new(1274, 199, -2538)
         pl.CFrame = location
     end
 })

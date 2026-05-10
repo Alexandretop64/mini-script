@@ -1,6 +1,10 @@
 local placeFolders = {
     [6243699076] = "Themimic/books/lobby/",
     [6296321810] = "Themimic/books/B1C1/",
+    [6301638949] = "Themimic/books/B1C2/",
+    [6301640798] = "Themimic/books/B1C3/",
+    [6301642655] = "Themimic/books/B1C4/",
+    [6301644506] = "Themimic/books/B1C5/",
     [7068737459] = "Themimic/books/gamemode/",
     [7618863566] = "Themimic/books/Jigoku/",
     [18856836424] = "War Empire Tycoon/"
