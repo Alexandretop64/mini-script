@@ -36,17 +36,18 @@ TabMain:Select()
 TabMain:Button({
     Title = "Teleport cutscene",
     Callback = function()
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(609, 11, 1083)
+        pl.CFrame = location
     end
 })
 
 TabMain:Button({
     Title = "Teleport safezone",
     Callback = function()
-        local safezone = workspace:FindFirstChild("Fp Oddball")
-        if safezone then
-            local cf = safezone:IsA("Model") and safezone:GetPivot() or safezone.CFrame
-            tp(cf + Vector3.new(0,14,-5))
-        end
+        local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+        local location = CFrame.new(604, 83, 1115)
+        pl.CFrame = location
     end
 })
 

@@ -76,6 +76,7 @@ local Window = WindUI:CreateWindow({
 
 local TabMain = Window:Tab({ Title = "Main" })
 
+TabMain:Select()
 TabMain:Section({
 Title = "   Farms",
 })
