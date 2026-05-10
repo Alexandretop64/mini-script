@@ -1,20 +1,3 @@
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-
-local function getCharacter()
-    return player.Character or player.CharacterAdded:Wait()
-end
-
-local function tp(cf)
-    local char = getCharacter()
-    local hrp = char:WaitForChild("HumanoidRootPart")
-
-    hrp.Anchored = true
-    hrp.CFrame = CFrame.new(cf.Position)
-    task.wait(0.2)
-    hrp.Anchored = false
-end
-
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
 local Window = WindUI:CreateWindow({
