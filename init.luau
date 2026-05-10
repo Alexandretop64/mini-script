@@ -1,6 +1,7 @@
 local placeFolders = {
     [6243699076] = "Themimic/books/lobby/",
     [6296321810] = "Themimic/books/B1C1/",
+    [7068737459] = "Themimic/books/Gamemode/",
 }
 
 local placeId: number = game.PlaceId
