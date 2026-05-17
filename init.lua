@@ -8,12 +8,22 @@ local games = {
 }
 
 local function notify(message)
-    pcall(function()
-        StarterGui:SetCore("SendNotification", {
-            Title = "Astreon Loader",
-            Text = message,
-            Duration = 5,
-        })
+    task.spawn(function()
+        for _ = 1, 8 do
+            local success = pcall(function()
+                StarterGui:SetCore("SendNotification", {
+                    Title = "Astreon Loader",
+                    Text = message,
+                    Duration = 5,
+                })
+            end)
+
+            if success then
+                return
+            end
+
+            task.wait(0.5)
+        end
     end)
 end
 
