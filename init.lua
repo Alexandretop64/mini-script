@@ -1,7 +1,7 @@
 local StarterGui = game:GetService("StarterGui")
 local MarketplaceService = game:GetService("MarketplaceService")
 
-local BASE_URL = "https://raw.githubusercontent.com/AlexandreTop64/mini-script/refs/heads/main/script/"
+local BASE_URL = "https://raw.githubusercontent.com/AlexandreTop64/mini-script/main/script/"
 
 local games = {
     [893973440] = "flee-the-facility.lua",
